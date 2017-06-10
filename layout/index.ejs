@@ -1,0 +1,114 @@
+<%- partial('partial/head', {page:page, theme:theme}) %>
+
+<%- partial('partial/header', {page:page, theme:theme}) %>
+
+<!-- main section -->
+<div class="ts narrow container relaxed stackable grid">
+        <!-- left section -->
+        <div class="eleven wide column" style=" padding: 35px; ">
+            <!-- Articles -->
+            <%  for(var i = 0;i < page.posts.data.length;i++){ 
+                var post = page.posts.data[i];
+                if(post.content.length > theme.excerpt_length){
+                    post.content = post.content.substr(0,theme.excerpt_length).concat('...');
+                }
+                var date = new Date(post.date);
+            %>
+            <div class="ts horizontally fitted basic segment">
+                <!-- title bar -->
+                <div class="ts huge header">
+                    <a href="<%= post.path %>" style="color: <%= theme.article_color %>;"><%= post.title %></a>
+                    <div class="sub header">
+                        <%= date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() %>・
+                        <% if (post.tags && post.tags.length){ %>
+                        <%- list_tags(post.tags, {
+                            show_count: false,
+                            class : 'unstyled tag-list '
+                        }) %>
+                        <% } %>
+                    </div>
+                </div>
+                <!-- / the end of title bar -->
+
+                <p><%= post.content.replace(/(<([^>]+)>)/ig, ' ') %></p>
+                <a href="<%= post.path %>" class="ts circular button">Read More</a>
+            </div>
+            <% } %>
+            <!-- / the end of articles -->
+
+
+            <!-- page number -->
+            <div class="ts basic horizontally fitted padded segment">
+                <div class="ts pagination menu">
+                    <a class="item">上一頁</a>
+                    <a class="item">1</a>
+                    <a class="item">2</a>
+                    <a class="item">3</a>
+                    <a class="item">下一頁</a>
+                </div>
+            </div>
+            <!-- / the end of page number -->
+        </div>
+        <!-- / left section -->
+
+        <!-- 留白 -->
+        <div class="one wide column"></div>
+
+        <!-- 右側區塊 -->
+        <div class="four wide column" style=" padding-top: 35px; ">
+
+            <% if(theme.enabled_about_me){ %>
+            <!-- About Me Section -->
+            <div class="ts flatted secondary segment">
+                <h3><%= theme.about_me %></h3>
+                <p><%= theme.about_me_content %></p>
+            </div>
+            <!-- the end of about me -->
+            <% } %>
+
+            <!-- 側邊區塊 -->
+            <div class="ts basic segment">
+                <h3>彙整</h3>
+                <div class="ts relaxed link list">
+                    <a class="item">2016 年 4 月</a>
+                    <a class="item">2016 年 3 月</a>
+                    <a class="item">2016 年 2 月</a>
+                    <a class="item">2016 年 1 月</a>
+                    <a class="item">2015 年 8 月</a>
+                    <a class="item">2013 年 9 月</a>
+                    <a class="item">1998 年 7 月</a>
+                </div>
+            </div>
+            <!-- / 側邊區塊 -->
+
+            <!-- 側邊區塊 -->
+            <div class="ts basic segment">
+                <h3>其他連結</h3>
+                <div class="ts relaxed link list">
+                    <a class="item">YouTube</a>
+                    <a class="item">Twitter</a>
+                    <a class="item">Facebook</a>
+                    <a class="item">Google</a>
+                </div>
+            </div>
+            <!-- / 側邊區塊 -->
+        </div>
+        <!-- / 右側區塊 -->
+</div>
+<!-- / 主要區塊 -->
+
+<!-- 部落格 -->
+<div class="ts attached secondary segment">
+    <div class="ts narrow container">
+        <br>
+        <div class="ts large center aligned header">
+            Tocas UI 部落格範例
+            <div class="smaller sub header">
+                由 Yami Odymel 製作
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<!-- / 部落格 -->
+<%- partial('partial/footer', {page:page}) %>

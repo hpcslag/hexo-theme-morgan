@@ -1,0 +1,23 @@
+<body>
+<!-- navigation -->
+<div class="ts fluid basic link big menu">
+    <div class="ts very narrow container">
+        <% for (var i in theme.menu){ %>
+            <a class="item" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+        <% } %>
+    </div>
+</div>
+<!-- the end of navigation -->
+
+<!-- big bang title -->
+<div class="ts padded horizontally fitted fluid slate">
+    <div class="ts very narrow container">
+        <!-- Title -->
+        <h1 class="ts header">
+            <span style="color: <%= theme.title_color %>;"><%= config.title %></span>
+            <div class="sub header" id="slogan-bar" style=" margin-top: 15px; "><%=  theme.slogan %></div>
+        </h1>
+        <!-- the end of title -->
+    </div>
+</div>
+<!-- the end of big bang title -->
