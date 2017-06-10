@@ -33,15 +33,16 @@
   <% } %>
   <%- css('css/tocas.css') %>
   <%- css('css/animate.css') %>
-  <%- js('js/tocas.js') %>
-  <%- partial('google-analytics') %>
+  <%- css('css/style.css') %>
   <style type="text/css">
-        .tag-list{
-            display:inline-block;
-            margin-right: 10px;
-        }
-        .tag-list a::before{
-            content: "#";
-        }
+    a.title-link:hover{
+        color: <%= theme.article_color_hover %> !important;
+    }
+
+    a.title-link:active{
+        color: <%= theme.article_color_active %> !important;
+    }
   </style>
+  <%- js('js/tocas.js') %>
+  <%- partial('partial/google-analytics') %>
 </head>

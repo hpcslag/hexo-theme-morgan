@@ -10,12 +10,12 @@
 <!-- the end of navigation -->
 
 <!-- big bang title -->
-<div class="ts padded horizontally fitted fluid slate">
+<div class="ts padded horizontally fitted fluid slate" style="background-color: <%= theme.title_background_color %>;">
     <div class="ts very narrow container">
         <!-- Title -->
         <h1 class="ts header">
-            <span style="color: <%= theme.title_color %>;"><%= config.title %></span>
-            <div class="sub header" id="slogan-bar" style=" margin-top: 15px; "><%=  theme.slogan %></div>
+            <span style="color: <%= theme.title_color %>;" id="big-title"><%= config.title %></span>
+            <div class="sub header" id="slogan-bar" style=" margin-top: 15px; color: <%= theme.title_color %>;"><%=  theme.slogan %></div>
         </h1>
         <!-- the end of title -->
     </div>

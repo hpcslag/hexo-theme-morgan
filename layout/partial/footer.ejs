@@ -1,34 +1,6 @@
 <script type="text/javascript">
     const slogans = [<% for(var i = 0; i < theme.slogan.length; i++){ %>"<%= theme.slogan[i] %>"<% if(i != theme.slogan.length-1){ %>,<% } %><% } %>];
-    let sloganBar = document.getElementById("slogan-bar");
-    let slogan_position = 0;
-    if(slogans.length > 1){
-        callFadeIn(slogans[slogan_position]);
-        slogan_position += 1;
-
-        setInterval(()=>{
-            callFadeOut();
-            setTimeout(()=>{
-                callFadeIn(slogans[slogan_position]);
-                slogan_position += 1;
-                if(slogan_position == slogans.length) slogan_position = 0;
-            },1000);
-        },5000);
-    }
-
-    function callFadeIn(text){
-        sloganBar.innerText = text;
-        sloganBar.classList.remove("fadeOutUp");
-        sloganBar.classList.remove("animated");
-        sloganBar.className += " animated fadeInUp";
-    }
-
-    function callFadeOut(){
-        sloganBar.classList.remove("fadeInUp");
-        sloganBar.classList.remove("animated");
-        sloganBar.className += " animated fadeOutUp";
-    }
-    
 </script>
+<%- js('js/script.js') %>
 </body>
 </html>
