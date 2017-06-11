@@ -1,7 +1,15 @@
 <body>
 <!-- navigation -->
+
 <div class="ts fluid basic link big menu" id="menu-color-id">
-    <div class="ts narrow container relaxed stackable grid" style=" padding-left: 25px; ">
+
+    <!-- ejs : align to post page or index page -->
+        <% if(!!page.posts){ %>
+            <div class="ts narrow container relaxed stackable grid" style=" padding-left: 25px; ">
+        <% } else{ %>
+            <div class="ts very narrow container">
+        <% } %>
+
         <% for (var i in theme.menu){ %>
             <a class="item" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
         <% } %>
@@ -11,9 +19,14 @@
 
 <!-- big bang title -->
 <div class="ts padded horizontally fitted fluid slate" style="background-color: <%= theme.title_background_color %>;">
-    <div class="ts narrow container relaxed stackable grid" style=" padding-left: 35px; ">
+    <!-- ejs : align to post page or index page -->
+    <% if(!!page.posts){ %>
+        <div class="ts narrow container relaxed stackable grid" id="big-bang-title" style=" padding-left: 35px; ">
+    <% } else{ %>
+        <div class="ts very narrow container">
+    <% } %>
         <!-- Title -->
-        <h1 class="ts header be-center-h1">
+        <h1 class="ts eleven wide column header be-center-h1">
             <span style="color: <%= theme.title_color %>;" id="big-title"><%= config.title %></span>
             <div class="sub header" id="slogan-bar" style=" margin-top: 15px; color: <%= theme.title_color %>;"><% if(theme.slogan.length == 1){ %><%=  theme.slogan %><% } %></div>
         </h1>
