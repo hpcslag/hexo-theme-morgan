@@ -68,4 +68,6 @@ about_me_content : "I am a dedicated person with a family of four. I enjoy readi
 #footer content
 footer_big_content : ""
 footer_small_content : ""
+
+#github setting
 theme: jekyll-theme-cayman
