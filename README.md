@@ -1,4 +1,4 @@
-# Hexo Theme - Morgen
+# Hexo Theme - Morgan
 This is a [Hexo Theme](https://hexo.io/), Style-Framework based on [Tocas-UI](https://tocas-ui.com).
 
 # Install
@@ -6,15 +6,14 @@ This is a [Hexo Theme](https://hexo.io/), Style-Framework based on [Tocas-UI](ht
 1. Move command to your hexo `themes` folder.
 
 ```
-cd ./themes
-git clone https://github.com/hpcslag/hexo-theme-morgan.git
+git clone https://github.com/hpcslag/hexo-theme-morgan.git themes/tocas-ui-morgan
 ```
 
 2. Modify `_config.yml` on main folder:
 
 
 ```yaml
-theme: hexo-theme-morgan
+theme: tocas-ui-morgan
 ```
 
 3. Restart Hexo Server.
