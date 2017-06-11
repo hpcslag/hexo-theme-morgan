@@ -45,11 +45,11 @@ excerpt_length : 400
 #page setting - slogan
 slogan : [ "Hallo, dit is mijn blog", "嗨，這是我的博客!","안녕하세요, 제 블로그입니다.", "Hi, This is my blog!", "こんにちは、私のブログへようこそ!", "مرحبا، مرحبا بك في مدونتي" ]
 slogan_random_display : false
-slogan_color: "white"
+slogan_color: "#404040"
 
 #page setting - blog title color
-title_color : "white" #default #404040
-title_background_color : "#34bed0" #default: #f7f7f7
+title_color : "#404040"
+title_background_color :  "#f7f7f7"
 
 #page setting - menu color
 menu_text_color : "#5a5a5a"
