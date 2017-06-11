@@ -42,6 +42,14 @@
     a.title-link:active{
         color: <%= theme.article_color_active %> !important;
     }
+
+    #menu-color-id{
+        background : <%= theme.menu_background_color %>;
+    }
+
+    #menu-color-id a{
+        color: <%= theme.menu_text_color %>;
+    }
   </style>
   <%- js('js/tocas.js') %>
   <%- partial('partial/google-analytics') %>

@@ -25,7 +25,7 @@
         </div>
         <!-- / left section -->
         
-        <% if(theme.enabled_disquz) { %>
+        <% if(theme.enabled_disqus) { %>
             <hr/>
             <div id="disqus_thread" style=" margin-top: 15px; margin-bottom: 25px; "></div>
             <script>
@@ -40,7 +40,7 @@
                 */
                 (function() { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
-                s.src = '<%= theme.disquz_url %>';
+                s.src = '<%= theme.disqus_url %>';
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
                 })();

@@ -1,4 +1,15 @@
 <script type="text/javascript">
+    <% if(theme.slogan_random_display){
+            function shuffle(a) {
+                for (let i = a.length; i; i--) {
+                    let j = Math.floor(Math.random() * i);
+                    [a[i - 1], a[j]] = [a[j], a[i - 1]];
+                }
+            }
+            
+            shuffle(theme.slogan);
+        }
+    %>
     const slogans = [<% for(var i = 0; i < theme.slogan.length; i++){ %>"<%= theme.slogan[i] %>"<% if(i != theme.slogan.length-1){ %>,<% } %><% } %>];
 </script>
 <%- js('js/script.js') %>

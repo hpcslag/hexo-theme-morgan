@@ -59,3 +59,12 @@
 .next-prev-post-section a:last-child::after{
     content: "";
 }
+
+@media screen and (max-width: 750px) {
+    .be-center-h1{
+        text-align: center;
+    }
+    .be-center-h1 span{
+        margin : 0px auto;
+    }
+}

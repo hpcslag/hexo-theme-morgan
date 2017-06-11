@@ -89,20 +89,28 @@
         </div>
         <!-- the end of right section -->
 </div>
-<!-- / 主要區塊 -->
+<!-- the end of main section -->
 
-<!-- 部落格 -->
+<!-- footer -->
 <div class="ts attached secondary segment">
     <div class="ts narrow container">
         <br>
         <div class="ts large center aligned header">
-            Powered by Hexo, Theme designs by @hpcslag.
+            <% if(theme.footer_big_content == ""){ %>
+                Powered by <a href="https://hexo.io">&nbsp;Hexo</a>, Theme designs by <a href="https://github.com/hpcslag">&nbsp;@hpcslag</a>.
+            <% }else{ %>
+                <%= theme.footer_big_content %>
+            <% } %>
             <div class="smaller sub header">
-                Style-Framework Tocas-UI designs by @yamioldmel 
+            <% if(theme.footer_small_content == ""){ %>
+                Style-Framework <a href="https://tocas-ui.com">&nbsp;Tocas-UI</a> designs by <a href="https://github.com/YamiOdymel">&nbsp;@YamiOldmel</a>
+            <% }else{ %>
+                <%= theme.footer_small_content  %>
+            <% } %>
             </div>
         </div>
         <br>
     </div>
 </div>
-<!-- / 部落格 -->
+<!-- the end of footer -->
 <%- partial('partial/footer', {page:page}) %>
