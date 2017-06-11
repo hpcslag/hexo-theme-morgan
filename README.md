@@ -18,6 +18,14 @@ theme: tocas-ui-morgan
 
 3. Restart Hexo Server.
 
+# Update
+
+If you want to update `Morgan` theme, you can enter this command:
+```shell
+cd themes/tocas-ui-morgan/ && git pull && cd ../..
+```
+
+
 # Config Setup
 You can also setup something in this theme, follow this description.
 
