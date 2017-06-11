@@ -67,4 +67,7 @@
     .be-center-h1 span{
         margin : 0px auto;
     }
+    #big-bang-title{
+        padding-left: 0px !important;
+    }
 }

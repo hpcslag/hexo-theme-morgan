@@ -29,9 +29,9 @@
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-  <link rel="stylesheet" href="https://hpcslag.github.io/hexo-theme-morgan/demo/css/tocas.css">
-  <link rel="stylesheet" href="https://hpcslag.github.io/hexo-theme-morgan/demo/css/animate.css">
-  <link rel="stylesheet" href="https://hpcslag.github.io/hexo-theme-morgan/demo/css/style.css">
+  <link rel="stylesheet" href="/css/tocas.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="/css/style.css">
   <style type="text/css">
     a.title-link:hover{
         color: #34b2db !important;
@@ -49,19 +49,25 @@
         color: #5a5a5a;
     }
   </style>
-  <script src="https://hpcslag.github.io/hexo-theme-morgan/demo/js/tocas.js"></script>
+  <script src="/js/tocas.js"></script>
   
 
 </head>
 
 <body>
 <!-- navigation -->
+
 <div class="ts fluid basic link big menu" id="menu-color-id">
-    <div class="ts narrow container relaxed stackable grid" style=" padding-left: 25px; ">
+
+    <!-- ejs : align to post page or index page -->
         
-            <a class="item" href="https://hpcslag.github.io/hexo-theme-morgan/demo/">Home</a>
+            <div class="ts very narrow container">
         
-            <a class="item" href="https://hpcslag.github.io/hexo-theme-morgan/demo/archives">Archives</a>
+
+        
+            <a class="item" href="/">Home</a>
+        
+            <a class="item" href="/archives">Archives</a>
         
     </div>
 </div>
@@ -69,9 +75,12 @@
 
 <!-- big bang title -->
 <div class="ts padded horizontally fitted fluid slate" style="background-color: #f7f7f7;">
-    <div class="ts narrow container relaxed stackable grid" style=" padding-left: 35px; ">
+    <!-- ejs : align to post page or index page -->
+    
+        <div class="ts very narrow container">
+    
         <!-- Title -->
-        <h1 class="ts header be-center-h1">
+        <h1 class="ts eleven wide column header be-center-h1">
             <span style="color: #404040;" id="big-title">Morgan</span>
             <div class="sub header" id="slogan-bar" style=" margin-top: 15px; color: #404040;"></div>
         </h1>
@@ -94,9 +103,9 @@
                 </h1>
 
                 <p>This is a image test post.</p>
-<p><img src="https://hpcslag.github.io/hexo-theme-morgan/demo/assets/wallpaper-2572384.jpg" alt=""></p>
-<p><img src="https://hpcslag.github.io/hexo-theme-morgan/demo/assets/wallpaper-2311325.jpg" alt="Caption"></p>
-<p><img src="https://hpcslag.github.io/hexo-theme-morgan/demo/assets/wallpaper-878514.jpg" alt=""></p>
+<p><img src="/assets/wallpaper-2572384.jpg" alt=""></p>
+<p><img src="/assets/wallpaper-2311325.jpg" alt="Caption"></p>
+<p><img src="/assets/wallpaper-878514.jpg" alt=""></p>
 <p><img src="http://placehold.it/350x150.jpg" alt="Small Picture"></p>
 
             <!-- / the end of articles -->
@@ -134,7 +143,7 @@
                 <a href="#"></a>
             
             
-                <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/25/no-title/" class="styled-border">
+                <a href="/2013/12/25/no-title/" class="styled-border">
                     
                     (no title)
                     →
@@ -169,6 +178,6 @@
     
     const slogans = ["Hallo, dit is mijn blog","嗨，這是我的博客!","안녕하세요, 제 블로그입니다.","Hi, This is my blog!","こんにちは、私のブログへようこそ!","مرحبا، مرحبا بك في مدونتي"];
 </script>
-<script src="https://hpcslag.github.io/hexo-theme-morgan/demo/js/script.js"></script>
+<script src="/js/script.js"></script>
 </body>
 </html>

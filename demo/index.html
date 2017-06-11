@@ -20,9 +20,9 @@
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-  <link rel="stylesheet" href="https://hpcslag.github.io/hexo-theme-morgan/demo/css/tocas.css">
-  <link rel="stylesheet" href="https://hpcslag.github.io/hexo-theme-morgan/demo/css/animate.css">
-  <link rel="stylesheet" href="https://hpcslag.github.io/hexo-theme-morgan/demo/css/style.css">
+  <link rel="stylesheet" href="/css/tocas.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="/css/style.css">
   <style type="text/css">
     a.title-link:hover{
         color: #34b2db !important;
@@ -40,19 +40,25 @@
         color: #5a5a5a;
     }
   </style>
-  <script src="https://hpcslag.github.io/hexo-theme-morgan/demo/js/tocas.js"></script>
+  <script src="/js/tocas.js"></script>
   
 
 </head>
 
 <body>
 <!-- navigation -->
+
 <div class="ts fluid basic link big menu" id="menu-color-id">
-    <div class="ts narrow container relaxed stackable grid" style=" padding-left: 25px; ">
+
+    <!-- ejs : align to post page or index page -->
         
-            <a class="item" href="https://hpcslag.github.io/hexo-theme-morgan/demo/">Home</a>
+            <div class="ts narrow container relaxed stackable grid" style=" padding-left: 25px; ">
         
-            <a class="item" href="https://hpcslag.github.io/hexo-theme-morgan/demo/archives">Archives</a>
+
+        
+            <a class="item" href="/">Home</a>
+        
+            <a class="item" href="/archives">Archives</a>
         
     </div>
 </div>
@@ -60,9 +66,12 @@
 
 <!-- big bang title -->
 <div class="ts padded horizontally fitted fluid slate" style="background-color: #f7f7f7;">
-    <div class="ts narrow container relaxed stackable grid" style=" padding-left: 35px; ">
+    <!-- ejs : align to post page or index page -->
+    
+        <div class="ts narrow container relaxed stackable grid" id="big-bang-title" style=" padding-left: 35px; ">
+    
         <!-- Title -->
-        <h1 class="ts header be-center-h1">
+        <h1 class="ts eleven wide column header be-center-h1">
             <span style="color: #404040;" id="big-title">Morgan</span>
             <div class="sub header" id="slogan-bar" style=" margin-top: 15px; color: #404040;"></div>
         </h1>
@@ -80,7 +89,7 @@
             <div class="ts horizontally fitted basic segment">
                 <!-- title bar -->
                 <div class="ts huge header">
-                    <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/26/images/" class="title-link" style="color: #3498db;">Images</a>
+                    <a href="/2013/12/26/images/" class="title-link" style="color: #3498db;">Images</a>
                     <div class="sub header">
                         2013-11-26
                         
@@ -89,13 +98,13 @@
                 <!-- / the end of title bar -->
 
                 <p></p>
-                <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/26/images/" class="ts circular button">Read More</a>
+                <a href="/2013/12/26/images/" class="ts circular button">Read More</a>
             </div>
             
             <div class="ts horizontally fitted basic segment">
                 <!-- title bar -->
                 <div class="ts huge header">
-                    <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/25/no-title/" class="title-link" style="color: #3498db;"></a>
+                    <a href="/2013/12/25/no-title/" class="title-link" style="color: #3498db;"></a>
                     <div class="sub header">
                         2013-11-25
                         
@@ -104,13 +113,13 @@
                 <!-- / the end of title bar -->
 
                 <p></p>
-                <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/25/no-title/" class="ts circular button">Read More</a>
+                <a href="/2013/12/25/no-title/" class="ts circular button">Read More</a>
             </div>
             
             <div class="ts horizontally fitted basic segment">
                 <!-- title bar -->
                 <div class="ts huge header">
-                    <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/25/excerpts/" class="title-link" style="color: #3498db;">Excerpts</a>
+                    <a href="/2013/12/25/excerpts/" class="title-link" style="color: #3498db;">Excerpts</a>
                     <div class="sub header">
                         2013-11-25
                         
@@ -121,13 +130,13 @@
                 <p> The following contents should be invisible in home/archive page. 
   
  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget urna vitae velit eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Aliquam eleifend dolor vitae libero pharetra adi...</p>
-                <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/25/excerpts/" class="ts circular button">Read More</a>
+                <a href="/2013/12/25/excerpts/" class="ts circular button">Read More</a>
             </div>
             
             <div class="ts horizontally fitted basic segment">
                 <!-- title bar -->
                 <div class="ts huge header">
-                    <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/25/videos/" class="title-link" style="color: #3498db;">Videos</a>
+                    <a href="/2013/12/25/videos/" class="title-link" style="color: #3498db;">Videos</a>
                     <div class="sub header">
                         2013-11-25
                         
@@ -136,13 +145,13 @@
                 <!-- / the end of title bar -->
 
                 <p></p>
-                <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/25/videos/" class="ts circular button">Read More</a>
+                <a href="/2013/12/25/videos/" class="ts circular button">Read More</a>
             </div>
             
             <div class="ts horizontally fitted basic segment">
                 <!-- title bar -->
                 <div class="ts huge header">
-                    <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/25/gallery-post/" class="title-link" style="color: #3498db;">Gallery Post</a>
+                    <a href="/2013/12/25/gallery-post/" class="title-link" style="color: #3498db;">Gallery Post</a>
                     <div class="sub header">
                         2013-11-25
                         
@@ -151,13 +160,13 @@
                 <!-- / the end of title bar -->
 
                 <p></p>
-                <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/25/gallery-post/" class="ts circular button">Read More</a>
+                <a href="/2013/12/25/gallery-post/" class="ts circular button">Read More</a>
             </div>
             
             <div class="ts horizontally fitted basic segment">
                 <!-- title bar -->
                 <div class="ts huge header">
-                    <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/25/tag-plugins/" class="title-link" style="color: #3498db;">Tag Plugins</a>
+                    <a href="/2013/12/25/tag-plugins/" class="title-link" style="color: #3498db;">Tag Plugins</a>
                     <div class="sub header">
                         2013-11-25
                         
@@ -167,13 +176,13 @@
 
                 <p> This post is used for testing tag plugins. See  docs  for more info. 
    Block Quote    Normal blockquote &lt;blockq...</p>
-                <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/25/tag-plugins/" class="ts circular button">Read More</a>
+                <a href="/2013/12/25/tag-plugins/" class="ts circular button">Read More</a>
             </div>
             
             <div class="ts horizontally fitted basic segment">
                 <!-- title bar -->
                 <div class="ts huge header">
-                    <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/24/link-post-without-title/" class="title-link" style="color: #3498db;">www.google.com</a>
+                    <a href="/2013/12/24/link-post-without-title/" class="title-link" style="color: #3498db;">www.google.com</a>
                     <div class="sub header">
                         2013-11-24
                         
@@ -182,13 +191,13 @@
                 <!-- / the end of title bar -->
 
                 <p></p>
-                <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/24/link-post-without-title/" class="ts circular button">Read More</a>
+                <a href="/2013/12/24/link-post-without-title/" class="ts circular button">Read More</a>
             </div>
             
             <div class="ts horizontally fitted basic segment">
                 <!-- title bar -->
                 <div class="ts huge header">
-                    <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/24/日本語テスト/" class="title-link" style="color: #3498db;">日本語テスト</a>
+                    <a href="/2013/12/24/日本語テスト/" class="title-link" style="color: #3498db;">日本語テスト</a>
                     <div class="sub header">
                         2013-11-24
                         
@@ -205,13 +214,13 @@
  それでそれでもご時日をしはずはたったいやと突き抜けるますて、その元がは行ったてという獄を尽すていけですた。 
  
  この...</p>
-                <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/24/日本語テスト/" class="ts circular button">Read More</a>
+                <a href="/2013/12/24/日本語テスト/" class="ts circular button">Read More</a>
             </div>
             
             <div class="ts horizontally fitted basic segment">
                 <!-- title bar -->
                 <div class="ts huge header">
-                    <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/24/中文測試/" class="title-link" style="color: #3498db;">中文測試</a>
+                    <a href="/2013/12/24/中文測試/" class="title-link" style="color: #3498db;">中文測試</a>
                     <div class="sub header">
                         2013-11-24
                         
@@ -223,13 +232,13 @@
  善我王上魚、產生資西員合兒臉趣論。畫衣生這著爸毛親可時，安程幾？合學作。觀經而作建。都非子作這！法如言子你關！手師也。 
  以也座論頭室業放。要車時地變此親不老高小是統習直麼調未，行年香一？ 
  就竟在，是我童示讓利分和異種百路關母信過明驗有個歷洋中前合著區亮風值新底車有正結，進快保的行戰從：弟除文辦條國備當來際年每小腳識世可的的外的廣下歌洲保輪市果底天影；全氣具些回童但倒影發狀在示，數上學大法很，如要我……月品大供這起服滿老？應學傳者國：山式排只不之然清同關；細車是！停屋常間又，資畫領生，相們制在？公別的人寫教資夠。資再我我！只臉夫藝量不路政吃息緊回力之；兒足灣電空時局我怎初安。意今一子區首者微陸現際安除發連由子由而走學體區園我車當會，經時取頭，嚴了新科同？很夫營動通打，出和導一樂，查旅他。...</p>
-                <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/24/中文測試/" class="ts circular button">Read More</a>
+                <a href="/2013/12/24/中文測試/" class="ts circular button">Read More</a>
             </div>
             
             <div class="ts horizontally fitted basic segment">
                 <!-- title bar -->
                 <div class="ts huge header">
-                    <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/24/long-title/" class="title-link" style="color: #3498db;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo turpis, tincidunt ac convallis id.</a>
+                    <a href="/2013/12/24/long-title/" class="title-link" style="color: #3498db;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo turpis, tincidunt ac convallis id.</a>
                     <div class="sub header">
                         2013-11-24
                         
@@ -238,7 +247,7 @@
                 <!-- / the end of title bar -->
 
                 <p></p>
-                <a href="https://hpcslag.github.io/hexo-theme-morgan/demo/2013/12/24/long-title/" class="ts circular button">Read More</a>
+                <a href="/2013/12/24/long-title/" class="ts circular button">Read More</a>
             </div>
             
             <!-- / the end of articles -->
@@ -314,6 +323,6 @@
     
     const slogans = ["Hallo, dit is mijn blog","嗨，這是我的博客!","안녕하세요, 제 블로그입니다.","Hi, This is my blog!","こんにちは、私のブログへようこそ!","مرحبا، مرحبا بك في مدونتي"];
 </script>
-<script src="https://hpcslag.github.io/hexo-theme-morgan/demo/js/script.js"></script>
+<script src="/js/script.js"></script>
 </body>
 </html>
