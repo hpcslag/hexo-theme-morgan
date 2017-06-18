@@ -1,0 +1,83 @@
+<%- partial('partial/head', {page:page, theme:theme}) %>
+
+<%- partial('partial/header', {page:page, theme:theme}) %>
+
+<!-- archive section -->
+<div class="ts narrow container" style=" margin-bottom: 35px; ">
+    <div style=" padding-top: 35px; "><!-- split line--></div>
+        <!-- Archives -->
+        <%  
+            var isFirst = true;
+            var last_month = '';
+
+            for(var i = 0;i < page.posts.data.length;i++){ 
+            var post = page.posts.data[i];
+            var content = "";
+            if(post.content.length > theme.excerpt_length){
+                content = post.content.toString();
+                content = content.substr(0,theme.excerpt_length).concat('...').toString();
+            }
+            var date = new Date(post.date);
+        %>
+            <% if(isFirst) {
+                    isFirst = false;
+                    last_month = date.getMonth()
+            %>
+                <div class="ts small header" style=" color: #989898; text-shadow: 1px 1px 1px #e7e7e7; "><%= date.getFullYear() + "." + date.getMonth() %></div>
+                <div class="ts doubling link cards four">
+            <% } %>
+
+            <% if(last_month != date.getMonth()){ 
+                    last_month = date.getMonth()
+            %>
+                </div>
+                <div class="ts small header" style=" color: #989898; text-shadow: 1px 1px 1px #e7e7e7; "><%= date.getFullYear() + "." + date.getMonth() %></div>
+                <div class="ts doubling link cards four">
+            <% } %>
+
+            <div class="ts card" onclick="location.href='<%= '/' + post.path %>'">
+                <div class="content">
+                    <div class="header"><%= post.title %></div>
+                    <div class="bullted meta">
+                        <div>
+                            <%= date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() %>
+                            <% if (post.tags && post.tags.length){ %><br/>
+                            <%- list_tags(post.tags, {
+                                show_count: false,
+                                class : 'unstyled',
+                                style : null,
+                                separator : ' ,'
+                            }) %>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>
+<!-- the end of archive section -->
+
+<!-- footer -->
+<div class="ts attached secondary segment">
+    <div class="ts narrow container">
+        <br>
+        <div class="ts large center aligned header">
+            <% if(theme.footer_big_content == ""){ %>
+                Powered by <a href="https://hexo.io">&nbsp;Hexo</a>, Theme designs by <a href="https://github.com/hpcslag">&nbsp;@hpcslag</a>.
+            <% }else{ %>
+                <%= theme.footer_big_content %>
+            <% } %>
+            <div class="smaller sub header">
+            <% if(theme.footer_small_content == ""){ %>
+                Style-Framework <a href="https://tocas-ui.com">&nbsp;Tocas-UI</a> designs by <a href="https://github.com/YamiOdymel">&nbsp;@YamiOldmel</a>
+            <% }else{ %>
+                <%= theme.footer_small_content  %>
+            <% } %>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<!-- the end of footer -->
+<%- partial('partial/footer', {page:page}) %>
