@@ -9,7 +9,7 @@ This is a [Hexo Theme](https://hexo.io/), Style-Framework based on [Tocas-UI](ht
 git clone https://github.com/hpcslag/hexo-theme-morgan.git themes/tocas-ui-morgan
 ```
 
-2. Modify `_config.yml` on main folder:
+2. Modify `/_config.yml` on main folder:
 
 
 ```yaml
@@ -17,6 +17,41 @@ theme: tocas-ui-morgan
 ```
 
 3. Restart Hexo Server.
+
+# Code Highlight Support
+
+Morgan use [`hexo-prism-plugin`](https://github.com/ele828/hexo-prism-plugin) to display code highlight.
+
+![](http://i.imgur.com/qcA4ZCY.png)
+
+Please follwing the step to install: (install in hexo blog root)
+
+```
+npm i -S hexo-prism-plugin
+```
+And you need to edit `/_config.yml`: 
+ 
+```yaml
+highlight:
+  enable: false
+```
+
+Then edit `/_config.yml` by adding following line:
+
+```yaml
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'default'
+  line_number: false    # default false
+```
+
+tips: you can change prism theme, please reference: [Prism Offical](http://prismjs.com/)
+
+After modified, please clean hexo:
+
+```
+hexo clean
+```
 
 # Update
 
@@ -29,7 +64,7 @@ cd themes/tocas-ui-morgan/ && git pull && cd ../..
 # Config Setup
 You can also setup something in this theme, follow this description.
 
-Modify `/themes/_config.yml` :
+Modify `/themes/tocas-ui-morgan/_config.yml` :
 
 ### Disquz Comment
 If you want to enable **Disqus** feature, please set `enabled_disqus` value to `true`, and also paste your url (before need to create your own Disqus URL) to `disqus_url`.

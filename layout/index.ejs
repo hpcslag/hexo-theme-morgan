@@ -19,7 +19,7 @@
             <div class="ts horizontally fitted basic segment">
                 <!-- title bar -->
                 <div class="ts huge header">
-                    <a href="<%= '/' + post.path %>" class="title-link" style="color: <%= theme.article_color %>;"><%= post.title %></a>
+                    <a href="<%- url_for(post.path) %>" class="title-link" style="color: <%= theme.article_color %>;"><%= post.title %></a>
                     <div class="sub header">
                         <%= date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() %>
                         <% if (post.tags && post.tags.length){ %>・
@@ -33,7 +33,7 @@
                 <!-- / the end of title bar -->
 
                 <p><%= content.replace(/(<([^>]+)>)/ig, ' ') %></p>
-                <a href="<%= '/' + post.path %>" class="ts circular button">Read More</a>
+                <a href="<%- url_for(post.path) %>" class="ts circular button">Read More</a>
             </div>
             <% } %>
             <!-- / the end of articles -->
