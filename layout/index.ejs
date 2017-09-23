@@ -9,11 +9,7 @@
             <!-- Articles -->
             <%  for(var i = 0;i < page.posts.data.length;i++){ 
                 var post = page.posts.data[i];
-                var content = "";
-                if(post.content.length > theme.excerpt_length){
-                    content = post.content.toString();
-                    content = content.substr(0,theme.excerpt_length).concat('...').toString();
-                }
+                var content = post.excerpt;
                 var date = new Date(post.date);
             %>
             <div class="ts horizontally fitted basic segment">
