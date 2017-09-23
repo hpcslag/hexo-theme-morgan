@@ -74,14 +74,6 @@ If you want to enable **Disqus** feature, please set `enabled_disqus` value to `
 | disqus_url [string] | https://[your-site-name].disqus.com/embed.js      |
 | enabled_disquzs [boolean] | true      |
 
-### Excerpt Length (ReadMore Less)
-
-Set how long text you want to break, and system will insert **Read More** button after short content.
-
-| Config Key Name  | Value Description |
-| ---------------- | ----------------- |
-| excerpt_length [int] | 400 |
-
 ### Slogan
 Slogan conents is the animate that dispay on `Header`, if you just setting less then 2 slogan, then animate will not be play.
 
