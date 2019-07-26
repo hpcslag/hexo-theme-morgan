@@ -12,7 +12,7 @@
                 <% var date = new Date(page.date); %>
                 <h1 class="ts header">
                     <span style="color: #333;"><%= page.title %></span>
-                    <div class="sub header" style="color: #808080;">Publish: <%= date.getFullYear() + "/" + date.getMonth() + "/" + date.getDate() %> 
+                    <div class="sub header" style="color: #808080;">Publish: <%= date.getFullYear() + "/" + (date.getMonth()+1) + "/" + date.getDate() %> 
                     <% if (page.tags && page.tags.length){ %> &nbsp;&nbsp;
                         <%- list_tags(page.tags, {
                             show_count: false,

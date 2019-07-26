@@ -17,7 +17,7 @@
                 <div class="ts huge header">
                     <a href="<%- url_for(post.path) %>" class="title-link" style="color: <%= theme.article_color %>;"><%= post.title %></a>
                     <div class="sub header">
-                        <%= date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() %>
+                        <%= date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate() %>
                         <% if (post.tags && post.tags.length){ %>・
                         <%- list_tags(post.tags, {
                             show_count: false,

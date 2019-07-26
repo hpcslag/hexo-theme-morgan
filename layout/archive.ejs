@@ -21,17 +21,17 @@
         %>
             <% if(isFirst) {
                     isFirst = false;
-                    last_month = date.getMonth()
+                    last_month = (date.getMonth()+1)
             %>
-                <div class="ts small header" style=" color: #989898; text-shadow: 1px 1px 1px #e7e7e7; "><%= date.getFullYear() + "." + date.getMonth() %></div>
+                <div class="ts small header" style=" color: #989898; text-shadow: 1px 1px 1px #e7e7e7; "><%= date.getFullYear() + "." + (date.getMonth()+1) %></div>
                 <div class="ts doubling link cards four">
             <% } %>
 
-            <% if(last_month != date.getMonth()){ 
-                    last_month = date.getMonth()
+            <% if(last_month != (date.getMonth()+1)){ 
+                    last_month = (date.getMonth()+1)
             %>
                 </div>
-                <div class="ts small header" style=" color: #989898; text-shadow: 1px 1px 1px #e7e7e7; "><%= date.getFullYear() + "." + date.getMonth() %></div>
+                <div class="ts small header" style=" color: #989898; text-shadow: 1px 1px 1px #e7e7e7; "><%= date.getFullYear() + "." + (date.getMonth()+1) %></div>
                 <div class="ts doubling link cards four">
             <% } %>
 
@@ -40,7 +40,7 @@
                     <div class="header"><%= post.title %></div>
                     <div class="bullted meta">
                         <div>
-                            <%= date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() %>
+                            <%= date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate() %>
                             <% if (post.tags && post.tags.length){ %><br/>
                             <%- list_tags(post.tags, {
                                 show_count: false,
